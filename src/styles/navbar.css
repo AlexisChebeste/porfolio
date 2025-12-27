@@ -1,0 +1,145 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #E0E0E0;
+    z-index: 999;
+}
+
+nav a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333333;
+    margin: 0;
+}
+
+/* LOGO */
+.logo {
+    text-decoration: none;
+    color: #333333;
+}
+
+.logo:hover {
+    color: #000000;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.nav-container {
+    max-width: 1200px;
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* BOTÓN DEL MENÚ */
+.button-menu {
+    border: none;
+    cursor: pointer;
+    display: none;
+    border-radius: 100%;
+    width: max-content;
+    padding: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #f0f0f0;
+    }
+}
+
+/* NAV DESKTOP */
+.list-nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.list-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+.list-nav li a {
+    text-decoration: none;
+    color: #5A5A65;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.list-nav li a:hover {
+    color: #000000;
+}
+
+/* NAV MOBILE (contenedor) */
+.mobile-menu {
+    background: white;
+    border-top: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.2rem 0 1.5rem;
+    gap: 1.5rem;
+}
+
+/* LISTA MOBILE */
+.list-nav-mobile {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+    width: 100%;
+}
+
+.list-nav-mobile li a {
+    text-decoration: none;
+    color: #5A5A65;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.list-nav-mobile li a:hover {
+    color: #000000;
+}
+
+.contact-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+}
+
+/* BREAKPOINT */
+@media (max-width: 700px) {
+
+    .list-nav {
+        display: none;
+    }
+
+    .button-menu {
+        display: flex;
+    }
+
+    /* Mobile menu siempre en columna, centrado, sin que se meta en el costado */
+    .mobile-menu {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        border-top: 1px solid #eee;
+        background: white;
+        padding: 1.2rem 0 1.5rem;
+    }
+}
