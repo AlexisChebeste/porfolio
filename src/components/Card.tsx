@@ -13,7 +13,9 @@ interface CardProps {
 export default function CardProject({ title, periodo, description, list, links, img }: CardProps) {
     return (
         <div className="card">
-            <img src={img} alt="Proyecto 1" className="project-image"/>
+            <a href={links.page} target="_blank" rel="noopener noreferrer" className="project-link">
+                <img src={img} alt={title} className="project-image"/>
+            </a>
             <header className="card-header">
                 <h3>{title}</h3>
                 <span className="card-periodo">{periodo}</span>
@@ -67,8 +69,8 @@ export function FooterCard({technologys, links}: {technologys : string[], links:
             </ul>
 
             <div className="container-buttons">
-                <ButtonLink href={links.github} icon={<Github size={16} />} />
-                <ButtonLink href={links.page} icon={<ExternalLink size={16} />} />
+                <ButtonLink href={links.github} icon={<Github size={16} />} className="links-icon"/>
+                <ButtonLink href={links.page} icon={<ExternalLink size={16}/>} className="links-icon"/>
             </div>
         </footer>
     )

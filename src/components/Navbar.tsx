@@ -19,7 +19,13 @@ export default function Navbar() {
             <li><a href="#skills">Habilidades</a></li>
             <li><a href="#education">Educación</a></li>
           </ul>
-          <ButtonLink href="mailto:alexischebeste@gmail.com" text="CV" className="contact-button" icon={<Download size={16}/>}/>
+          <ButtonLink 
+            href="/cv/Alexis-Chebeste-CV.pdf" 
+            text="CV" 
+            badge="PDF"  
+            variant="cv"
+            icon={<Download size={16}/>}
+          />
         
         </div>
         <button className="button-menu" onClick={() => setIsOpen(!isOpen)}>

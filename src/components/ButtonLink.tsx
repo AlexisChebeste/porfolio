@@ -1,10 +1,38 @@
+type ButtonLinkProps = {
+  href: string
+  icon: React.ReactNode
+  className?: string
+  text?: string
+  badge?: string
+  variant?: "default" | "cv"
+}
 
 
-export default function ButtonLink({ href, icon, text, className }: { href: string; icon: React.ReactNode; text?: string; className?: string }) {
+export default function ButtonLink({
+    href, 
+    icon,
+    text,
+    className,
+    badge,
+    variant = "default"
+} : ButtonLinkProps) {
+
     return (
-        <a href={href} className={`button-link ${className}`} target="_blank" rel="noopener noreferrer">
-            {icon}
-            {text}
+        <a 
+            href={href} 
+            className={`hero-action ${className} button-link--${variant} `} 
+            target="_blank" 
+            rel="noopener noreferrer"
+        >
+            <span className="icon">{icon}</span>
+
+           {text &&  <span className="text">{text}</span>}
+
+            {badge && (
+                <span className="button-link__badge">
+                {badge}
+                </span>
+            )}
         </a>
     )
 }

@@ -6,7 +6,7 @@ export default function Hero() {
     const [copied, setCopied] = useState(false);
 
     const handleCopy = async () => {
-        await navigator.clipboard.writeText("alexischebebeste@gmail.com");
+        await navigator.clipboard.writeText("alexischebebeste499@gmail.com");
         setCopied(true);
 
         setTimeout(() => setCopied(false), 2000);
@@ -18,18 +18,17 @@ export default function Hero() {
                 <h1>Alexis Chebeste</h1>
                 <p className="text-hero">Diseño y desarrollo interfaces intuitivas y aplicaciones web escalables, con foco en usabilidad, rendimiento y buenas prácticas de desarrollo frontend.</p>
                 <div className="container-hero-buttons">
-                    <button onClick={handleCopy} className="contact-button">
-                        <span className={`button-content ${copied ? "copied" : ""}`}>
+                    <button onClick={handleCopy} className="hero-action contact-button">
+                        <span 
+                            className={`icon ${copied ? "copied" : ""}`}
+                        >
                             {copied ? (
-                            <>
-                                <Check size={16} /> Email copiado
-                            </>
+                                <Check size={16} /> 
                             ) : (
-                            <>
-                                <Mail size={16} /> Copiar email
-                            </>
+                                <Mail size={16} />
                             )}
                         </span>
+                        <span>{copied? "Mail copiado" : "Copiar mail" }</span>
                     </button>
                     <ButtonLink href="https://github.com/AlexisChebeste" text="GitHub" icon={<Github size={16}/>} className="hero-button"/>
                     <ButtonLink href="https://www.linkedin.com/in/alexis-chebeste/" text="LinkedIn" icon={<Linkedin size={16}/>} className="hero-button"/>
