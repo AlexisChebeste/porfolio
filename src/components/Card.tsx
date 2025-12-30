@@ -14,7 +14,7 @@ export default function CardProject({ title, periodo, description, list, links, 
     return (
         <div className="card">
             <a href={links.page} target="_blank" rel="noopener noreferrer" className="project-link">
-                <img src={img} alt={title} className="project-image"/>
+                <img src={img} alt={title} loading="lazy" className="project-image"/>
             </a>
             <header className="card-header">
                 <h3>{title}</h3>
