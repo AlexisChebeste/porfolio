@@ -1,7 +1,7 @@
 import { useScrollFade } from "../lib/useScrollFade";
 
 export default function AboutMe() {
-    const fadeRef = useScrollFade();
+    const fadeRef = useScrollFade<HTMLDivElement>()
 
     return (
         <section ref={fadeRef}className="about-me block" >

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useScrollFade } from "../lib/useScrollFade";
 
 export default function Hero() {
+    const fadeRef = useScrollFade<HTMLDivElement>()    
     const [copied, setCopied] = useState(false);
 
     const handleCopy = async () => {
@@ -12,7 +13,6 @@ export default function Hero() {
 
         setTimeout(() => setCopied(false), 2000);
     };
-    const fadeRef = useScrollFade();
 
     return (
         <section ref={fadeRef}className="hero block">

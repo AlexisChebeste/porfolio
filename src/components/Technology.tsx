@@ -7,7 +7,7 @@ const technologies = {
 }
 
 export default function Technology() {
-  const fadeRef = useScrollFade();
+  const fadeRef = useScrollFade<HTMLDivElement>()
   return (
     <div  ref={fadeRef} id="skills" className="skills block">
         <p className="subtitle">Habilidades técnicas</p>

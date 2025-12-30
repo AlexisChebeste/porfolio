@@ -28,7 +28,7 @@ const projectsData = [
 ];
 
 export default function Projects() {
-    const fadeRef = useScrollFade();
+    const fadeRef = useScrollFade<HTMLDivElement>()
 
     return (
         <section ref={fadeRef} id="projects" className="projects block">

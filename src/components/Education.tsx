@@ -2,7 +2,7 @@ import { useScrollFade } from "../lib/useScrollFade";
 import { CardAcademic } from "./Card"
 
 export default function Education() {
-    const fadeRef = useScrollFade();
+    const fadeRef = useScrollFade<HTMLDivElement>()
 
     return (
         <section ref={fadeRef} id="education" className="education block">
