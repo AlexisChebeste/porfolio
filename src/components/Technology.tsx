@@ -7,7 +7,7 @@ const technologies = {
 
 export default function Technology() {
   return (
-    <div id="skills" className="technology-container block">
+    <div id="skills" className="skills block">
         <p className="subtitle">Habilidades técnicas</p>
         <h2>Tecnologías</h2>
         <div className="technology-sections">

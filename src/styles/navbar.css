@@ -3,27 +3,27 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #FFFFFF;
+    background-color: var(--navbar-base-color);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid #E0E0E0;
+    border-bottom: 1px solid var(--border-color);
     z-index: 999;
 }
 
 nav a {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #333333;
+    color: var(--text-navbar-color);
     margin: 0;
 }
 
 /* LOGO */
 .logo {
     text-decoration: none;
-    color: #333333;
+    color: var(--text-navbar-color);
 }
 
 .logo:hover {
-    color: #000000;
+    color: var(--logobar-hover);
 }
 
 /* CONTENEDOR PRINCIPAL */
@@ -71,7 +71,7 @@ nav a {
 
 .list-nav li a {
     text-decoration: none;
-    color: #5A5A65;
+    color: var(--text-navbar-color);
     font-weight: 500;
     transition: color 0.3s ease;
     font-size: 0.9rem;

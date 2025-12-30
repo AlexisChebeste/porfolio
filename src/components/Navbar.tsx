@@ -2,6 +2,7 @@ import { Download, Menu, X } from "lucide-react";
 import ButtonLink from "./ButtonLink";
 import { useState } from "react";
 import "../styles/navbar.css";
+import ToggleTheme from "./ToggleTheme";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,6 +20,7 @@ export default function Navbar() {
             <li><a href="#skills">Habilidades</a></li>
             <li><a href="#education">Educación</a></li>
           </ul>
+          <ToggleTheme />
           <ButtonLink 
             href="/cv/Alexis-Chebeste-CV.pdf" 
             text="CV" 
