@@ -1,4 +1,3 @@
-
 import AboutMe from "./components/AboutMe"
 import Education from "./components/Education"
 import Footer from "./components/Footer"

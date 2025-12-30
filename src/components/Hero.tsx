@@ -1,6 +1,7 @@
 import { Check, Github, Linkedin, Mail } from "lucide-react";
 import ButtonLink from "./ButtonLink";
 import { useState } from "react";
+import { useScrollFade } from "../lib/useScrollFade";
 
 export default function Hero() {
     const [copied, setCopied] = useState(false);
@@ -11,8 +12,10 @@ export default function Hero() {
 
         setTimeout(() => setCopied(false), 2000);
     };
+    const fadeRef = useScrollFade();
+
     return (
-        <section className="hero block">
+        <section ref={fadeRef}className="hero block">
             <div>
                 <p className="subtitle">Desarrollador Frontend</p>
                 <h1>Alexis Chebeste</h1>

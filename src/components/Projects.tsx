@@ -1,3 +1,4 @@
+import { useScrollFade } from "../lib/useScrollFade";
 import CardProject from "./Card";
 
 const projectsData = [
@@ -27,8 +28,10 @@ const projectsData = [
 ];
 
 export default function Projects() {
+    const fadeRef = useScrollFade();
+
     return (
-        <section id="projects" className="projects block">
+        <section ref={fadeRef} id="projects" className="projects block">
             <p className="subtitle">Proyectos</p>
             <h2>Mis trabajos recientes</h2>
             <div className="cards cards-project">

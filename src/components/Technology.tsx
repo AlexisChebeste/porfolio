@@ -1,3 +1,4 @@
+import { useScrollFade } from "../lib/useScrollFade";
 
 const technologies = {
     frontend: ['HTML', 'CSS', 'JavaScript','React', 'TypeScript', "Tailwind CSS"],
@@ -6,8 +7,9 @@ const technologies = {
 }
 
 export default function Technology() {
+  const fadeRef = useScrollFade();
   return (
-    <div id="skills" className="skills block">
+    <div  ref={fadeRef} id="skills" className="skills block">
         <p className="subtitle">Habilidades técnicas</p>
         <h2>Tecnologías</h2>
         <div className="technology-sections">
