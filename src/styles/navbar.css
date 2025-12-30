@@ -1,5 +1,5 @@
 nav {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
@@ -34,6 +34,7 @@ nav a {
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
+    z-index: 999;
 }
 
 /* BOTÓN DEL MENÚ */
@@ -83,13 +84,7 @@ nav a {
 
 /* NAV MOBILE (contenedor) */
 .mobile-menu {
-    background: white;
-    border-top: 1px solid #eee;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1.2rem 0 1.5rem;
-    gap: 1.5rem;
+    display: none;
 }
 
 /* LISTA MOBILE */
@@ -121,7 +116,7 @@ nav a {
 }
 
 /* BREAKPOINT */
-@media (max-width: 700px) {
+@media (max-width: 768px) {
 
     .list-nav {
         display: none;
@@ -133,13 +128,17 @@ nav a {
 
     /* Mobile menu siempre en columna, centrado, sin que se meta en el costado */
     .mobile-menu {
+        position: absolute;
+        background: white;
+        border-top: 1px solid #eee;
         display: flex;
-        width: 100%;
         flex-direction: column;
         align-items: center;
+        width: 100%;
         gap: 1.5rem;
-        border-top: 1px solid #eee;
         background: white;
         padding: 1.2rem 0 1.5rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        z-index: 999;
     }
 }

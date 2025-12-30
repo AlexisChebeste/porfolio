@@ -47,9 +47,15 @@ export default function Navbar() {
             <li><a href="#skills" onClick={() => setIsOpen(false)}>Habilidades</a></li>
             <li><a href="#education" onClick={() => setIsOpen(false)}>Educación</a></li>
           </ul>
-          <ButtonLink href="mailto:alexischebeste@gmail.com" text="Descargar CV" className="contact-button" icon={<Download size={16}/>}/>
+          <ButtonLink 
+            href="/cv/Alexis-Chebeste-CV.pdf" 
+            text="Descargar CV" 
+            badge="PDF"  
+            variant="cv"
+            icon={<Download size={16}/>}
+          />
         </div>
-      )}
+      )} 
     </nav>
   )
 }
