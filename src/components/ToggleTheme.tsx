@@ -17,7 +17,7 @@ function ThemeSwitch() {
   }, [darkMode])
 
   return (
-    <button onClick={() => setDarkMode(prev => !prev)} id="theme-switch">
+    <button onClick={() => setDarkMode(prev => !prev)} id="theme-switch" aria-label="Cambiar tema de estilo">
         <Moon size={18} />
         <Sun size={18} />
     </button>

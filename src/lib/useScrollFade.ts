@@ -11,8 +11,8 @@ export function useScrollFade<T extends HTMLElement>() {
       ([entry]: IntersectionObserverEntry[]) => {
         const ratio = entry.intersectionRatio;
 
-        const start = 0.3;
-        const end = 0.8;
+        const start = 0.2;
+        const end = 0.6;
 
         let progress = (ratio - start) / (end - start);
         progress = Math.min(Math.max(progress, 0), 1);

@@ -53,7 +53,8 @@ main {
 }
 
 p{
-  text-align: justify;
+  text-align: left;
+  text-wrap:pretty
 }
 
 h1 {
@@ -76,7 +77,6 @@ h1 {
     line-height: 1.5;
     margin-top: 1rem;
     color: var(--text-color);
-    text-align: justify;
   }
 }
 
@@ -482,6 +482,12 @@ footer {
 
 @media (max-width: 768px) {
 
+  p{
+    text-align: left;
+    max-width: 65ch;
+    line-height: 1.6;
+  }
+
   h1{
     font-size: 2.2rem;
   }
@@ -497,7 +503,8 @@ footer {
   }
 
   .hero p{
-    font-size: 1.1rem;
+    font-size: 1rem;
+    text-align:left
   }
 
   .hero .subtitle{
@@ -575,12 +582,7 @@ footer {
 
 }
 
-.block {
-  opacity: 0;
-  transform: scale(0.9);
-  transition: opacity 0.1s linear, transform 0.1s linear;
-  will-change: opacity, transform;
-}
+
 .scroll-fade {
   opacity: 0;
   transform: translateY(24px) scale(0.96);

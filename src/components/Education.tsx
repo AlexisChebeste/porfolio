@@ -5,9 +5,12 @@ export default function Education() {
     const fadeRef = useScrollFade<HTMLDivElement>()
 
     return (
-        <section ref={fadeRef} id="education" className="education block">
-            <p className="subtitle">Educación</p>
-            <h2>Formación académica</h2>
+        <section id="education" className="education block">
+            <div ref={fadeRef} className="scroll-fade">
+                
+                <p className="subtitle">Educación</p>
+                <h2>Formación académica</h2>
+            </div>
             <div className="cards container-education">
                 <CardAcademic 
                     title="Licenciatura en Informática"

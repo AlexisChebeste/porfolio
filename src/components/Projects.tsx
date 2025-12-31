@@ -31,9 +31,12 @@ export default function Projects() {
     const fadeRef = useScrollFade<HTMLDivElement>()
 
     return (
-        <section ref={fadeRef} id="projects" className="projects block">
-            <p className="subtitle">Proyectos</p>
-            <h2>Mis trabajos recientes</h2>
+        <section  id="projects" className="projects ">
+            <div ref={fadeRef} className="scroll-fade">
+                
+                <p className="subtitle">Proyectos</p>
+                <h2>Mis trabajos recientes</h2>
+            </div>
             <div className="cards cards-project">
                 {projectsData.map((project, index) => (
                     <CardProject

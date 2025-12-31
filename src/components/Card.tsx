@@ -1,5 +1,6 @@
 import { ExternalLink, Github, GraduationCap } from "lucide-react";
 import ButtonLink from "./ButtonLink";
+import { useScrollFade } from "../lib/useScrollFade";
 
 interface CardProps {
     title: string;
@@ -11,8 +12,10 @@ interface CardProps {
 }
 
 export default function CardProject({ title, periodo, description, list, links, img }: CardProps) {
+    const fadeRef = useScrollFade<HTMLDivElement>()
+    
     return (
-        <div className="card">
+        <div ref={fadeRef} className="card scroll-fade">
             <a href={links.page} target="_blank" rel="noopener noreferrer" className="project-link">
                 <img src={img} alt={title} loading="lazy" className="project-image" 
                     width={600}
@@ -35,8 +38,9 @@ export default function CardProject({ title, periodo, description, list, links, 
 }
 
 export function CardAcademic({ title, institution, periodo, description }: { title: string, institution: string, periodo: string, description: string, state: string }) {
+    const fadeRef = useScrollFade<HTMLDivElement>()
     return (
-        <div className="card card-academic">
+        <div ref={fadeRef} className="card card-academic scroll-fade">
             <header className="card-header">
                 <section className="card-section-header">
                     <div className="card-icon-title">

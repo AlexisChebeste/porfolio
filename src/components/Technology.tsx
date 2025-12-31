@@ -1,5 +1,5 @@
 import { useScrollFade } from "../lib/useScrollFade";
-import Chip from "./Chip";
+import ListTech from "./ListTech";
 
 const technologies = {
     frontend: ['HTML', 'CSS', 'JavaScript','React', 'TypeScript', "Tailwind CSS"],
@@ -10,19 +10,16 @@ const technologies = {
 export default function Technology() {
   const fadeRef = useScrollFade<HTMLDivElement>()
   return (
-    <div  ref={fadeRef} id="skills" className="skills block">
-        <p className="subtitle">Habilidades técnicas</p>
-        <h2>Tecnologías</h2>
+    <div   id="skills" className="skills block">
+        <div ref={fadeRef} className="scroll-fade">
+            <p className="subtitle">Habilidades técnicas</p>
+            <h2>Tecnologías</h2>
+        </div>
         <div className="technology-sections">
             {Object.entries(technologies).map(([category, techs]) => (
-                <div key={category} className="technology-section">
-                    <h3 className="technology-category">{category.charAt(0).toUpperCase() + category.slice(1)}</h3>
-                    <div className="technology-tags">
-                        {techs.map(tech => (
-                            <Chip key={tech} tag={tech} />
-                        ))}
-                    </div>
-                </div>
+                <ListTech category={category}
+                    techs={techs}
+                />
             ))}
         </div>
     </div>
