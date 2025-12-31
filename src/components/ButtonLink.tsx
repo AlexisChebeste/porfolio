@@ -1,6 +1,7 @@
 type ButtonLinkProps = {
   href: string
   icon: React.ReactNode
+  label: string
   className?: string
   text?: string
   badge?: string
@@ -14,6 +15,7 @@ export default function ButtonLink({
     text,
     className,
     badge,
+    label,
     variant = "default"
 } : ButtonLinkProps) {
 
@@ -22,6 +24,7 @@ export default function ButtonLink({
             href={href} 
             className={`hero-action ${className} button-link--${variant} `} 
             target="_blank" 
+            aria-label={label}
             rel="noopener noreferrer"
         >
             <span className="icon">{icon}</span>

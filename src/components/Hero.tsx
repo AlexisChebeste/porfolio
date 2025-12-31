@@ -1,4 +1,4 @@
-import { Check, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Check, Github, Linkedin, Mail } from "lucide-react";
 import ButtonLink from "./ButtonLink";
 import { useState } from "react";
 import { useScrollFade } from "../lib/useScrollFade";
@@ -33,14 +33,18 @@ export default function Hero() {
                         </span>
                         <span>{copied? "Mail copiado" : "Copiar mail" }</span>
                     </button>
-                    <ButtonLink href="https://github.com/AlexisChebeste" text="GitHub" icon={<Github size={16}/>} className="hero-button"/>
-                    <ButtonLink href="https://www.linkedin.com/in/alexis-chebeste/" text="LinkedIn" icon={<Linkedin size={16}/>} className="hero-button"/>
+                    <ButtonLink href="https://github.com/AlexisChebeste" text="GitHub" icon={<Github size={16}/>} className="hero-button" label="Ir hacia Github"/>
+                    <ButtonLink href="https://www.linkedin.com/in/alexis-chebeste/" text="LinkedIn" icon={<Linkedin size={16}/>} className="hero-button" label="Ir hacia linkedin"/>
                 </div>
             </div>
 
             <div>
-                <img src="/profile.png" alt="Foto de Alexis Chebeste"  className="hero-image"/>
+                <img src="/profile.png" alt="Foto de Alexis Chebeste"  className="hero-image" width={250} height={400}/>
             </div>
+
+            <a href="#education" aria-label="Ir hacia sección de educación" className="arrow">
+                <ArrowDown size={24}/>
+            </a>
         </section>
     )
 }

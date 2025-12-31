@@ -1,7 +1,7 @@
 :root {
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
-  scroll-padding: 100px;
+  scroll-padding: 150px;
   
   --background-color: #f8f8f8;
   --text-color: #5A5A65;
@@ -14,6 +14,8 @@
   --hero-shadow: rgba(158, 158, 158, 0.12);
   --border-color: #e0e0e0;
   --base-variant: #e8e9ed;
+  --arrow-background: #e0e0e0;
+  --arrow-color: #000;
 }
 
 .darkmode{
@@ -28,6 +30,8 @@
   --hero-shadow: rgba(197, 197, 197, 0.8);
   --border-color: #C8C3BC;
   --base-variant: #3e3f3f;
+  --arrow-background: #101025;
+  --arrow-color: #fff;
 }
 
 /*Elementos principales*/
@@ -79,12 +83,45 @@ h1 {
 .hero-image {
   object-fit:cover;
   height: 375px;
+  width: auto;
   border-radius: 50%;
   filter: drop-shadow(0px 0px 10px var(--hero-shadow));
 }
 
 .text-hero{
   max-width: 750px;
+}
+
+.arrow{
+  padding: 1rem;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--arrow-background);
+  color: var(--arrow-color);
+  border-radius: 50%;
+  box-shadow: 0px 0px 8px var(--hero-shadow);
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  right: 0;
+
+  animation: bounce 1s infinite
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
 }
 
 p.subtitle{
@@ -221,6 +258,7 @@ h2 {
 .project-image {
   object-fit: cover;
   width: 100%;
+  height: auto;
   border-radius: 6px;
   border: 1px solid var(--border-color);
   transition: filter 0.25s ease;
@@ -409,7 +447,7 @@ footer {
   border-left-width: 0;
   border-right-width: 0;
 
-  h4 {
+  h3 {
     margin: 0;
     font-size: 1.3rem;
     color: var(--text-color);
@@ -471,6 +509,10 @@ footer {
     flex-direction: column;
     align-items: stretch;
     gap: 0.8rem;
+  }
+
+  .arrow {
+    display: none;
   }
 
   .button-link{

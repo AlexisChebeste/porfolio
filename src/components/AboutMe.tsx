@@ -16,7 +16,10 @@ export default function AboutMe() {
                 </article>
             
                 <div>
-                    <img src="/profile2.jpg" alt="Foto de perfil" className="about-image" loading="lazy" />
+                    <img src="/profile2.jpg" alt="Foto de perfil" className="about-image" loading="lazy" 
+                        width={300}
+                        height={300}
+                    />
                 </div>
             </div>
         </section>

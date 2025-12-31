@@ -1,4 +1,5 @@
 import { useScrollFade } from "../lib/useScrollFade";
+import Chip from "./Chip";
 
 const technologies = {
     frontend: ['HTML', 'CSS', 'JavaScript','React', 'TypeScript', "Tailwind CSS"],
@@ -28,10 +29,3 @@ export default function Technology() {
   );
 }
 
-export function Chip({ tag }: { tag: string }) {
-  return (
-    <div className="chip-tags">
-        {tag}
-    </div>
-  );
-}

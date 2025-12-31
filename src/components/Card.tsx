@@ -14,7 +14,10 @@ export default function CardProject({ title, periodo, description, list, links, 
     return (
         <div className="card">
             <a href={links.page} target="_blank" rel="noopener noreferrer" className="project-link">
-                <img src={img} alt={title} loading="lazy" className="project-image"/>
+                <img src={img} alt={title} loading="lazy" className="project-image" 
+                    width={600}
+                    height={400}
+                />
             </a>
             <header className="card-header">
                 <h3>{title}</h3>
@@ -69,8 +72,8 @@ export function FooterCard({technologys, links}: {technologys : string[], links:
             </ul>
 
             <div className="container-buttons">
-                <ButtonLink href={links.github} icon={<Github size={16} />} className="links-icon"/>
-                <ButtonLink href={links.page} icon={<ExternalLink size={16}/>} className="links-icon"/>
+                <ButtonLink href={links.github} icon={<Github size={16} />} className="links-icon" label="Visitar repositorio"/>
+                <ButtonLink href={links.page} icon={<ExternalLink size={16}/>} className="links-icon" label="Visitar pagina web"/>
             </div>
         </footer>
     )

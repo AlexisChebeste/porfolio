@@ -26,11 +26,12 @@ export default function Navbar() {
             text="CV" 
             badge="PDF"  
             variant="cv"
+            label="Descargar curriculum"
             icon={<Download size={16}/>}
           />
         
         </div>
-        <button className="button-menu" onClick={() => setIsOpen(!isOpen)}>
+        <button aria-label="Menu" className="button-menu" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? (
             <X size={24} />
           ) : ( 
@@ -52,6 +53,7 @@ export default function Navbar() {
             text="Descargar CV" 
             badge="PDF"  
             variant="cv"
+            label="Descargar curriculum"
             icon={<Download size={16}/>}
           />
         </div>
