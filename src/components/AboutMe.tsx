@@ -4,7 +4,7 @@ export default function AboutMe() {
     const fadeRef = useScrollFade<HTMLDivElement>()
 
     return (
-        <section ref={fadeRef}className="about-me block" >
+        <section ref={fadeRef} id="about-me" className="about-me block" >
             <p className="subtitle">Educación</p>
             <h2>Sobre mí</h2>
             <div className="about-section">
