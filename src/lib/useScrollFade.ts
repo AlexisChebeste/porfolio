@@ -18,10 +18,8 @@ export function useScrollFade<T extends HTMLElement>() {
         progress = Math.min(Math.max(progress, 0), 1);
 
         element.style.opacity = String(progress);
-        element.style.transform = `
-          translateY(${24 - progress * 24}px)
-          scale(${0.96 + progress * 0.04})
-        `;
+        element.style.setProperty("--ty", `${24 - progress * 24}px`);
+        element.style.setProperty("--scroll-scale", `${0.96 + progress * 0.04}`);
       },
       {
         rootMargin: "-10% 0px -10% 0px",

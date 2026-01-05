@@ -13,10 +13,10 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <Education />
         <Projects />
-        <Technology />
         <AboutMe />
+        <Technology />
+        <Education />
       </main>
       <Footer />
 

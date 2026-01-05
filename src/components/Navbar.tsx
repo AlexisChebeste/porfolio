@@ -22,7 +22,7 @@ export default function Navbar() {
           </ul>
           <ToggleTheme />
           <ButtonLink 
-            href="/cv/Alexis-Chebeste-CV.pdf" 
+            href="/cv/CV-Alexis-P-Chebeste.pdf" 
             text="CV" 
             badge="PDF"  
             variant="cv"

@@ -20,10 +20,15 @@ export function ArticleAboutMe() {
     return(
         <div ref={fadeRef} className="about-section scroll-fade">
             <article>
-                <p>Tengo 22 años y soy desarrollador con experiencia en frontend y backend. Actualmente estoy cursando la Licenciatura en Informática y en 2025 obtuve mi título de Técnico Universitario en Programación.
+                <p>
+                    Soy desarrollador frontend con experiencia en proyectos académicos y personales,
+                    desde landing pages hasta sistemas de gestión desarrollados en equipo.
                 </p>
-                <p>He trabajado en proyectos variados: desde landing pages hasta sistemas completos de gestión para logística de viajes desarrollados en equipo para la universidad. Me gusta resolver problemas reales con código y crear interfaces claras e intuitivas para el usuario.</p>
-                <p>Estoy enfocado en seguir aprendiendo y construyendo proyectos que me permitan crecer como desarrollador. Mi objetivo es ingresar a la industria tech y contribuir en equipos que construyan productos de calidad.</p>
+                <p>
+                    Me motiva resolver problemas reales con código y crear interfaces claras,
+                    intuitivas y pensadas para el usuario.
+                </p>
+                <p>Estoy enfocado en seguir aprendiendo y construyendo proyectos que me permitan crecer como desarrollador y aportar valor en equipos de trabajo. </p>
             </article>
         
             <div>

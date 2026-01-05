@@ -42,7 +42,7 @@ export default function Hero() {
                 <img src="/profile.png" alt="Foto de Alexis Chebeste"  className="hero-image" width={250} height={400}/>
             </div>
 
-            <a href="#education" aria-label="Ir hacia sección de educación" className="arrow">
+            <a href="#projects" aria-label="Ir hacia sección de educación" className="arrow">
                 <ArrowDown size={24}/>
             </a>
         </section>
