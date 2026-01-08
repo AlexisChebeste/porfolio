@@ -22,13 +22,15 @@ export default function CardProject({ title, periodo, description, list, links, 
                     height={400}
                 />
             </a>
-            <header className="card-header">
-                <h3>{title}</h3>
-                <span className="card-periodo">{periodo}</span>
-            </header>
-            <section className="card-body">
-                <p>{description}</p>
-            </section>
+            <div className="card-content">
+                <header className="card-header">
+                    <h3>{title}</h3>
+                    <span className="card-periodo">{periodo}</span>
+                </header>
+                <section className="card-body">
+                    <p>{description}</p>
+                </section>
+            </div>
             <FooterCard 
                 technologys={list}
                 links={links}

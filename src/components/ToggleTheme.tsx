@@ -2,9 +2,17 @@ import { Moon, Sun } from "lucide-react"
 import { useEffect, useState } from "react"
 
 function ThemeSwitch() {
-  const [darkMode, setDarkMode] = useState(
-    localStorage.getItem("darkmode") === "active"
-  )
+  const [darkMode, setDarkMode] = useState(() => {
+    const savedTheme = localStorage.getItem("darkmode")
+
+    if (savedTheme) {
+      return savedTheme === "active"
+    }
+
+    // Preferencia del sistema
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
+    return prefersDark ?? true
+  })
 
   useEffect(() => {
     if (darkMode) {
@@ -17,7 +25,11 @@ function ThemeSwitch() {
   }, [darkMode])
 
   return (
-    <button onClick={() => setDarkMode(prev => !prev)} id="theme-switch" aria-label="Cambiar tema de estilo">
+    <button 
+      onClick={() => setDarkMode(prev => !prev)} 
+      id="theme-switch" 
+      aria-label="Cambiar tema de estilo"
+    >
         <Moon size={18} />
         <Sun size={18} />
     </button>

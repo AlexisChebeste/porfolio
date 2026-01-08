@@ -13,8 +13,12 @@ export default function Footer(){
                 </div>
             </div>
             <div className="divider-footer">
-                <p className="footer-text">© 2025 Alexis Chebeste. Todos los derechos reservados.</p>
+                <p className="footer-text">© {getCurrentYear()} Alexis Chebeste. Todos los derechos reservados.</p>
             </div>
         </footer> 
     )
+}
+
+const getCurrentYear = () => {
+    return new Date().getFullYear();
 }
