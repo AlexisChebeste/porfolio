@@ -2,7 +2,7 @@ import { useScrollFade } from "../lib/useScrollFade";
 import ListTech from "./ListTech";
 
 const technologies = {
-    frontend: ['HTML', 'CSS', 'JavaScript','React', 'TypeScript', "Tailwind CSS"],
+    frontend: ['HTML', 'CSS', 'JavaScript','React', 'TypeScript', "Tailwind CSS", "Next.js"],
     backend: ['Node.js', 'MongoDB', 'SQLite', 'Express.js'],
     herramientas: ['Git', 'Docker', 'Astro']
 }

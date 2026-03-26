@@ -26,6 +26,7 @@ export default function ButtonLink({
             target="_blank" 
             aria-label={label}
             rel="noopener noreferrer"
+            title={label}
         >
             <span className="icon">{icon}</span>
 
