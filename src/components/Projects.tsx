@@ -4,7 +4,22 @@ import CardProject from "./Card";
 import ProjectModal from "./ProjectModal";
 
 const projectsData = [
-    
+    {
+        title: "TrackFit - Tracker de Entrenamiento",
+        periodo: "2026",
+        description: "Aplicación de alto rendimiento para el seguimiento de entrenamiento de fuerza. Desarrollé un sistema que transforma datos crudos en insights visuales, permitiendo a los usuarios monitorear su volumen de carga, récords personales (PR) y evolución física mediante gráficos dinámicos y análisis de tendencias.",
+        list: ["Next.js", "TypeScript", "Supabase", "TanStack Query", "Recharts", "Tailwind CSS"],
+        link: {page: "https://gym-fit-gold.vercel.app/dashboard", github: "https://github.com/AlexisChebeste/GymFit"}, 
+        img: "/project4.webp",
+        highlights: [
+            "Visualización de datos compleja con gráficos de volumen y evolución de fuerza",
+            "Gestión de estado asincrónico y caché optimizada con TanStack Query",
+            "Sistema de autenticación y persistencia de datos en tiempo real con Supabase",
+            "Algoritmo de 'Insights' para detectar mejoras de rendimiento entre sesiones",
+            "Interfaz mobile-first con estética Dark Mode premium y feedback háptico visual"
+        ],
+        role: "Fullstack Developer - Arquitectura de datos y desarrollo de UI/UX",
+    },
     {
         title: "E-commerce de Ropa - LUMEN",
         periodo: "2026",
